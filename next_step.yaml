@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-02",
+  "status": "architecture_owner_bootstrap",
+  "objective": "Preserve CUDA-COMM as the provider-neutral communication semantic owner while keeping CUDA/native transport mechanisms below it.",
+  "authority": ["AGENTS.md", "docs/PROJECT_CHARTER.md", "docs/decisions/ADR-0001-independent-communication-semantic-owner.md"],
+  "current_focus": {
+    "issue": 3,
+    "status": "not_activated",
+    "next_action": "After bootstrap integration, compare concrete MCGS and NN consumers and select the smallest reusable collective or PGAS/RMA semantic profile; implementation still requires an accepted child specification."
+  },
+  "parallel_governance": {"issue": 2, "status": "blocked_on_control_plane_mutation"},
+  "do_not": [
+    "implement NCCL, NVSHMEM, RDMA or raw peer mechanisms here",
+    "import distributed-training, search or product topology policy",
+    "deep-import CUDA-JS or recreate native resource lifecycle",
+    "claim multi-GPU or multi-node support from repository creation"
+  ]
+}
