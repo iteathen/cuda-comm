@@ -1,15 +1,23 @@
-# cuda-comm
+# CUDA-COMM
 
-Reusable, application-neutral GPU communication semantics above CUDA-JS mechanisms.
+CUDA-COMM is a planned JavaScript library for reusable GPU communication in the CUDA-JS ecosystem, intended for developers building GPU applications.
 
-**Status:** architecture/governance bootstrap; production implementation not authorized.
+## Current state
 
-CUDA-COMM is intended to own provider-neutral group/team/rank, collective, point-to-point and PGAS/RMA semantics. CUDA-JS remains the owner of native NCCL/NVSHMEM/peer/RDMA provider mechanisms and CUDA resource lifecycle.
+This repository currently contains the project charter, architecture decision, development guidance, and planning records. **There is no production implementation, installable package, or public API yet.** No native-provider support or performance is claimed.
 
-CUDA-COMM does not own distributed-training policy, MCGS search/replica policy, or transparent cluster orchestration.
+## Intended scope
 
-Start with `AGENTS.md`, `docs/PROJECT_CHARTER.md`, and `docs/decisions/ADR-0001-independent-communication-semantic-owner.md`.
+The library aims to define groups and ranks, collectives, point-to-point transfers, and remote-memory operations through public CUDA-JS contracts.
 
-Tracking: #1 ownership/bootstrap, #2 repository controls, #3 semantic roadmap.
+Distributed-training policy, search coordination, and cluster administration remain with consumers. CUDA-JS supplies native communication and resource mechanisms.
 
-No package, API, provider, support, topology, performance or production-readiness claim exists yet.
+Implementation depends on a concrete consumer need and an accepted specification. The [activation roadmap](https://github.com/iteathen/cuda-comm/issues/3) describes candidate work; it is not a commitment that every proposed capability will ship.
+
+## Start here
+
+- [Current status](STATUS.md).
+- [Project charter](docs/PROJECT_CHARTER.md) and [documentation](docs/README.md).
+- [Development instructions](AGENTS.md) and [shared contribution guide](https://github.com/iteathen/.github/blob/main/CONTRIBUTING.md).
+- [Private security reporting](https://github.com/iteathen/.github/blob/main/SECURITY.md).
+- [License](LICENSE).

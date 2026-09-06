@@ -1,5 +1,7 @@
-# CUDA-COMM Specifications
+# CUDA-COMM specifications
 
-No production specifications are accepted yet.
+**No production specifications are accepted yet.**
 
-Issue #3 is a roadmap/assessment surface. The first implementation requires an accepted bounded communication semantic profile after concrete consumer and lower-layer mechanism assessment.
+The [activation roadmap](https://github.com/iteathen/cuda-comm/issues/3) organizes assessment. Implementation must first have a bounded, consumer-backed contract accepted under the [development instructions](../../AGENTS.md).
+
+Start with the [project charter](../PROJECT_CHARTER.md) and [architecture decision](../decisions/README.md) to understand the intended scope.
