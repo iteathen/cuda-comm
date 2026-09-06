@@ -1,16 +1,29 @@
 {
   "schema_version": 2,
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "status": "architecture_owner_integrated_consumer_activation_gated",
   "objective": "Preserve CUDA-COMM as the provider-neutral communication semantic owner while keeping CUDA/native transport mechanisms below it.",
-  "authority": ["AGENTS.md", "docs/PROJECT_CHARTER.md", "docs/decisions/ADR-0001-independent-communication-semantic-owner.md"],
-  "completed": {"issue": 1, "state": "ownership_bootstrap_integrated"},
+  "authority": [
+    "AGENTS.md",
+    "docs/PROJECT_CHARTER.md",
+    "docs/specs/SPEC-0001-native-boundary-and-js-only-implementation.md",
+    "docs/decisions/ADR-0001-independent-communication-semantic-owner.md"
+  ],
+  "completed": {
+    "ownership_bootstrap_issue": 1,
+    "repository_governance_issue": 2,
+    "repository_governance_state": "protected_main_aligned"
+  },
   "current_focus": {
     "issue": 3,
     "status": "consumer_selection_required",
-    "next_action": "Compare concrete MCGS and NN consumers now that ownership is integrated. Select the smallest reusable collective/P2P or PGAS/RMA semantic profile; keep those lanes separable and require an accepted bounded child specification before production implementation."
+    "next_action": "Use concrete CUDA-MCGS needs to select the smallest reusable collective/P2P or PGAS/RMA semantic profile. Keep the lanes separable and require an accepted bounded child specification before production implementation. Future NN demand counts only if cuda-nn is independently reactivated."
   },
-  "parallel_governance": {"issue": 2, "status": "main_unprotected_control_plane_alignment_open"},
+  "lower_native_state": {
+    "cuda_js_nccl_issue": 164,
+    "status": "historical_dormant_not_planned",
+    "rule": "Reactivate or select the smallest bounded CUDA-JS native-provider successor only after an accepted CUDA-COMM profile selects NCCL or another provider."
+  },
   "do_not": [
     "implement NCCL, NVSHMEM, RDMA or raw peer mechanisms here",
     "import distributed-training, search or product topology policy",
