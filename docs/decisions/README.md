@@ -1,5 +1,7 @@
-# CUDA-COMM Architecture Decisions
+# CUDA-COMM architecture decisions
 
-Accepted ADRs are immutable records.
+This directory records accepted architectural decisions. Later decisions may supersede earlier ones; retained records explain that history.
 
-- `ADR-0001-independent-communication-semantic-owner.md` — provider-neutral communication ownership and dependency direction.
+- [Independent GPU communication ownership](ADR-0001-independent-communication-semantic-owner.md): the library boundary and dependency direction.
+
+See the [specification index](../specs/README.md) before implementing a capability.
