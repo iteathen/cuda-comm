@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "repository": "iteathen/cuda-comm",
+  "claims": [
+    {
+      "id": "CUDA-COMM-PLAN-001",
+      "claim": "Intended project scope is reusable GPU communication through public CUDA-JS contracts.",
+      "evidence_class": "UNVALIDATED",
+      "status": "planning",
+      "oracle": "Repository charter and architecture decisions",
+      "revision": "main",
+      "falsifier": "An accepted project decision materially changes the intended scope.",
+      "evidence": [
+        "README.md",
+        "STATUS.md",
+        "docs/PROJECT_CHARTER.md"
+      ],
+      "limitations": [
+        "No production implementation, public API, native-provider support, or performance is established."
+      ],
+      "external_reproduction": false
+    }
+  ]
+}
