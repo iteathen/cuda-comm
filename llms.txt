@@ -1,0 +1,20 @@
+# cuda-comm
+
+> Public source index for LLMs and software agents. Read-only access requires no GitHub authentication.
+
+## Primary entry points
+
+- [README.md](https://raw.githubusercontent.com/iteathen/cuda-comm/main/README.md): project overview and documentation entry point.
+- [AGENTS.md](https://raw.githubusercontent.com/iteathen/cuda-comm/main/AGENTS.md): repository-specific agent instructions and authority rules.
+- [Agent access](https://raw.githubusercontent.com/iteathen/cuda-comm/main/.agent/ACCESS.md): anonymous access routes and precedence notes.
+- [LICENSE](https://raw.githubusercontent.com/iteathen/cuda-comm/main/LICENSE): license terms.
+
+## Anonymous source access
+
+- Repository: https://github.com/iteathen/cuda-comm
+- Git clone: `https://github.com/iteathen/cuda-comm.git`
+- Raw files: https://raw.githubusercontent.com/iteathen/cuda-comm/main/
+- ZIP snapshot: https://codeload.github.com/iteathen/cuda-comm/zip/refs/heads/main
+- tar.gz snapshot: https://codeload.github.com/iteathen/cuda-comm/tar.gz/refs/heads/main
+
+Prefer Git, raw HTTPS, or codeload over the GitHub REST API when possible. Follow repository-local authority and agent instructions.
